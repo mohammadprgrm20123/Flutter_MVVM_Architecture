@@ -1,16 +1,21 @@
-# mvvm_in_flutter
+# Flutter_MVVM_Architecture
 
-A new Flutter project.
+Model–View–ViewModel (MVVM) is a very established architectural pattern when it’s come to software development.
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+# Model
+The model represents a single source of truth that carries the real-time fetch data or database-related queries.
+This layer can contain business logic, code validation, etc. This layer interacts with ViewModel for local data or for real-time. Data are given in response to ViewModel.
 
-A few resources to get you started if this is your first Flutter project:
+# ViewModel
+ViewModel is the mediator between View and Model, which accept all the user events and request that to Model for data. Once the Model has data then it returns to ViewModel and then ViewModel notify that data to View.
+ViewModel can be used by multiple views, which means a single ViewModel can provide data to more than one View.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+# View
+The view is where the user is interacting with Widgets that are shown on the screen. These user events request some actions which navigate to ViewModel, and the rest of ViewModel does the job. Once ViewModel has the required data then it updates View.
+Now, we will go through the example which will demonstrate MVVM architecture, for notifying data we will use the Provider state mechanism.
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+
+
+# here work with PMVVM
